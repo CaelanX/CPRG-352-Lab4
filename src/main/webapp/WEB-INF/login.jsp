@@ -16,7 +16,7 @@
         <form action="login" method="post">
             <p>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <input type="text" id="username" name="username" value="${username}" required>
             </p>
             <p>
                 <label for="password">Password:</label>
