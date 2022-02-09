@@ -13,5 +13,18 @@
     </head>
     <body>
         <h1>Login</h1>
+        <form action="action">
+            <p>
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username">
+            </p>
+            <p>
+                <label for="password">Password:</label>
+                <input type="text" id="password" name="password">
+            </p>
+            <p>
+                <button type="submit">Login</button>
+            </p>
+        </form>
     </body>
 </html>
