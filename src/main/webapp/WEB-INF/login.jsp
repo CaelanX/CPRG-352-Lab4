@@ -13,18 +13,19 @@
     </head>
     <body>
         <h1>Login</h1>
-        <form action="action">
+        <form action="login" method="post">
             <p>
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username">
+                <input type="text" id="username" name="username" required>
             </p>
             <p>
                 <label for="password">Password:</label>
-                <input type="text" id="password" name="password">
+                <input type="password" id="password" name="password" required>
             </p>
             <p>
                 <button type="submit">Login</button>
             </p>
         </form>
+        <<p>${message}</p>
     </body>
 </html>

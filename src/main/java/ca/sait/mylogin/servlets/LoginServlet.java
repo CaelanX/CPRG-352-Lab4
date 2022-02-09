@@ -3,6 +3,7 @@ package ca.sait.mylogin.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Set;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -50,11 +51,19 @@ public class LoginServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-           
-        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request,response);
-        
         String username = request.getParameter("username");
         String password = request.getParameter("password");
+        
+        if(username == null || username.isEmpty()|| password == null || password.isEmpty()){
+            request.setAttribute("message", "Please fill in both fields.");
+            
+  
+            
+            
+        }
+        getServletContext().getRequestDispatcher("/WEB-INF/login.jsp").forward(request,response);
+        
+        
         
     }
 
